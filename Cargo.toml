@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+	"k9",
+	"dds",
+	"dialog_system_alpha",
+]

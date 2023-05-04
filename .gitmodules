@@ -1,0 +1,6 @@
+[submodule "k9"]
+	path = k9
+	url = git@github.com:xNWP/k9.git
+[submodule "dds"]
+	path = dds
+	url = git@github.com:xNWP/dds.git

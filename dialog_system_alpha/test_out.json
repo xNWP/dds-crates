@@ -1,0 +1,85 @@
+{
+  "start_node": "start",
+  "npc_name": "NpcName",
+  "dialog_nodes": {
+    "end": {
+      "EndNode": {
+        "npc_pages": [
+          {
+            "text": "welcome to the end node..."
+          },
+          {
+            "text": "goodbye!"
+          }
+        ]
+      }
+    },
+    "res_1": {
+      "CallNode": {
+        "npc_pages": [
+          {
+            "text": "welcome to the first response"
+          }
+        ],
+        "next": "end"
+      }
+    },
+    "res_2": {
+      "CallNode": {
+        "npc_pages": [
+          {
+            "text": "welcome to the second response"
+          }
+        ],
+        "next": "end"
+      }
+    },
+    "res_3": {
+      "CallNode": {
+        "npc_pages": [
+          {
+            "text": "welcome to the third response"
+          }
+        ],
+        "next": "end"
+      }
+    },
+    "response": {
+      "ResponseNode": {
+        "answers": [
+          {
+            "text": "This is the first option",
+            "value": 3,
+            "next": "res_1"
+          },
+          {
+            "text": "This is the second option",
+            "value": 0,
+            "next": "res_2"
+          },
+          {
+            "text": "This is the third option",
+            "value": -1,
+            "next": "res_3"
+          }
+        ]
+      }
+    },
+    "start": {
+      "CallNode": {
+        "npc_pages": [
+          {
+            "text": "hello world, this is the first page of the first node!"
+          },
+          {
+            "text": "this is the second page."
+          },
+          {
+            "text": "despite all expectations, this is in fact the third page"
+          }
+        ],
+        "next": "response"
+      }
+    }
+  }
+}
